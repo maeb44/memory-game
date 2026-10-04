@@ -1,4 +1,3 @@
-import { isGameOver } from './isGameOver';
 import { store } from './state';
 
 export function createCard(card: string, index: number) {
