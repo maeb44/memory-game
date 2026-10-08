@@ -15,6 +15,9 @@ body {
 .disabled {
   pointer-events: none;
 }
+.hidden {
+  overflow: hidden;
+}
 button:hover {
   cursor: pointer;
 }

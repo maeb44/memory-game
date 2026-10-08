@@ -35,28 +35,34 @@ export function createModal(title: string): void {
   tries.className = 'modal__txt';
   tries.textContent = `Tries: ${store.getState().tries}`;
 
+  document.body.classList.add('hidden');
+
   const newGameBtn = document.createElement('button');
   newGameBtn.className = 'modal__new-game';
   newGameBtn.type = 'button';
   newGameBtn.textContent = 'New Game';
   newGameBtn.addEventListener('click', () => {
     createBoard();
+    document.body.classList.remove('hidden');
     modal.remove();
   });
   // Закрытие по кнопке
   closeBtn.addEventListener('click', () => {
     modal.remove();
+    document.body.classList.remove('hidden');
     document.removeEventListener('keydown', handleEsc);
   });
 
   // Закрытие по клику на overlay
   overlay.addEventListener('click', () => {
     modal.remove();
+    document.body.classList.remove('hidden');
     document.removeEventListener('keydown', handleEsc);
   });
   const handleEsc = (e: KeyboardEvent) => {
     if (e.key === 'Escape') {
       modal.remove();
+      document.body.classList.remove('hidden');
       document.removeEventListener('keydown', handleEsc);
     }
   };
