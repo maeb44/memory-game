@@ -3,9 +3,11 @@
 @use './styles/_header' as *;
 @use './styles/_board' as *;
 @use './styles/_modal' as *;
+@use './styles/_variables' as *;
 
 body {
   @include flexcentre;
+  font-family: $font;
   flex-direction: column;
   justify-content: flex-start;
   width: 100vw;

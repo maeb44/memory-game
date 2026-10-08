@@ -1,0 +1,11 @@
+@use 'sass:color';
+
+$card: #3f83b4;
+$card-active: color.mix($card, #fff, 80%);
+$board: #5481a1;
+$header: color.mix($board, #b1b4b6, 90%);
+$button: #79a1dd;
+$button-hover: color.mix($button, #000, 90%);
+$border-color: #000;
+$text: #000;
+$font: 'Roboto', sans-serif;

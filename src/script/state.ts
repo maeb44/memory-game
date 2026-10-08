@@ -44,6 +44,5 @@ function createStore<S>(initial: S) {
 
 export const store = createStore(initialState);
 store.subscribe((state) => {
-  console.log(loadLeaderboard());
   localStorage.setItem('leaders', JSON.stringify(state.leaderboard));
 });

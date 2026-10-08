@@ -11,7 +11,7 @@ export function createCard(card: string, index: number) {
 
   const front = document.createElement('div');
   front.className = 'card__front';
-  front.textContent = '?'; // рубашка карточки
+  front.textContent = '❔'; // рубашка карточки
 
   const back = document.createElement('div');
   back.className = 'card__back';

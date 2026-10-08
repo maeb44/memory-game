@@ -27,13 +27,13 @@ export function createHeader(
   header.append(leaderboardBtn);
 
   const scoreBoard = document.createElement('div');
-  scoreBoard.className = 'menu__title';
+  scoreBoard.className = 'menu__title--non-act';
   scoreBoard.textContent = 'Score:\u00A0';
   scoreBoard.append(spanForScore);
   header.append(scoreBoard);
 
   const triesBoard = document.createElement('div');
-  triesBoard.className = 'menu__title';
+  triesBoard.className = 'menu__title--non-act';
   triesBoard.textContent = 'Tries:\u00A0';
   triesBoard.append(spanForTries);
   header.append(triesBoard);

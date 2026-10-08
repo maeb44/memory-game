@@ -1,19 +1,39 @@
 @use './mixins' as *;
+@use './_variables' as *;
 
 .menu {
   @include section;
   padding-block: 20px;
   gap: 20px;
-  background-color: rgb(236, 130, 0);
-  // border-radius: 10px 10px 0 0;
+  background-color: $header;
   &__title {
+    font-family: $font;
     @include flexcentre;
+    transition: all 0.3s ease;
     user-select: none;
-    border: 7px solid rgb(61, 59, 59);
+    border: 3px solid $border-color;
     border-radius: 10px;
-    color: rgb(195, 224, 224);
-    background: rgb(158, 111, 156);
+    color: $text;
+    background: $button;
     width: 150px;
     height: 60px;
+    &:hover {
+      background: $button-hover;
+      box-shadow: 0 0 10px $button;
+    }
+    &:active {
+      transform: scale(0.95);
+    }
+    &--non-act {
+      @include flexcentre;
+      transition: all 0.3s ease;
+      user-select: none;
+      border: 3px solid $border-color;
+      border-radius: 10px;
+      color: $text;
+      background: $button;
+      width: 150px;
+      height: 60px;
+    }
   }
 }
